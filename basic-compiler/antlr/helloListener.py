@@ -1,4 +1,4 @@
-# Generated from c:\Users\Ricardo\Desktop\ANTLR\basic-compiler\antlr\hello.g4 by ANTLR 4.8
+# Generated from c:\Users\Ricardo\Desktop\Github\Compilers\basic-compiler\antlr\hello.g4 by ANTLR 4.8
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .helloParser import helloParser
@@ -32,15 +32,6 @@ class helloListener(ParseTreeListener):
 
     # Exit a parse tree produced by helloParser#number.
     def exitNumber(self, ctx:helloParser.NumberContext):
-        pass
-
-
-    # Enter a parse tree produced by helloParser#endline.
-    def enterEndline(self, ctx:helloParser.EndlineContext):
-        pass
-
-    # Exit a parse tree produced by helloParser#endline.
-    def exitEndline(self, ctx:helloParser.EndlineContext):
         pass
 
 
@@ -98,21 +89,21 @@ class helloListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by helloParser#assign.
-    def enterAssign(self, ctx:helloParser.AssignContext):
-        pass
-
-    # Exit a parse tree produced by helloParser#assign.
-    def exitAssign(self, ctx:helloParser.AssignContext):
-        pass
-
-
     # Enter a parse tree produced by helloParser#declare.
     def enterDeclare(self, ctx:helloParser.DeclareContext):
         pass
 
     # Exit a parse tree produced by helloParser#declare.
     def exitDeclare(self, ctx:helloParser.DeclareContext):
+        pass
+
+
+    # Enter a parse tree produced by helloParser#assign.
+    def enterAssign(self, ctx:helloParser.AssignContext):
+        pass
+
+    # Exit a parse tree produced by helloParser#assign.
+    def exitAssign(self, ctx:helloParser.AssignContext):
         pass
 
 

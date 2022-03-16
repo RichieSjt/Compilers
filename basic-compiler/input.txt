@@ -1,2 +1,12 @@
-12
-a > b ? print(bruh) : uwu
+4 + 2
+6 - 3
+10 / 2
+4 * 4
+
+if(12 > 6) 
+    print(yes) 
+else 
+    print(no)
+
+if(12 < 4)
+    print(yes)

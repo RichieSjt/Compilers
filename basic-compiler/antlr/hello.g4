@@ -1,29 +1,27 @@
 grammar hello;
 
-program : expression+ ;
+program : expr+statement* ;
 
-expression:
-    expression '=' expression #assign 
-    | expression '+' expression #add 
-    | expression '-' expression #substract 
-    | expression '*' expression #multiply 
-    | expression '/' expression #divide
-    | expression '<' expression #lessthan
-    | expression '>' expression #greaterthan
+expr:
+    expr '+' expr #add 
+    | expr '-' expr #substract 
+    | expr '*' expr #multiply 
+    | expr '/' expr #divide
+    | expr '<' expr #lessthan
+    | expr '>' expr #greaterthan
     | Number #number
     | String #string
-    | Endline #endline
     ;
 
 statement:
-    'var' Var #declare
-    | expression '?' statement #if
-    | expression '?' statement ':' statement #ifelse
-    | 'print(' expression ')' #print
+    'int' Variable #declare
+    | Variable '=' Number #assign
+    | 'if(' expr ')' (expr | statement) #if
+    | 'if(' expr ')' (expr | statement) 'else' (expr | statement) #ifelse
+    | 'print(' expr ')' #print
     ;
 
 Number : [0-9]+;
 String :  [a-zA-Z0-9]+;
-Var :  [a-zA-Z]+;
-Endline: [\n];
-WS : [\t\r]+ -> skip;
+Variable :  [a-zA-Z]+;
+WS : [ \t\r\n]+ -> skip;

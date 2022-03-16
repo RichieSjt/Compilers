@@ -1,4 +1,4 @@
-# Generated from c:\Users\Ricardo\Desktop\ANTLR\basic-compiler\antlr\hello.g4 by ANTLR 4.8
+# Generated from c:\Users\Ricardo\Desktop\Github\Compilers\basic-compiler\antlr\hello.g4 by ANTLR 4.8
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .helloParser import helloParser
@@ -21,11 +21,6 @@ class helloVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by helloParser#number.
     def visitNumber(self, ctx:helloParser.NumberContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by helloParser#endline.
-    def visitEndline(self, ctx:helloParser.EndlineContext):
         return self.visitChildren(ctx)
 
 
@@ -59,13 +54,13 @@ class helloVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by helloParser#assign.
-    def visitAssign(self, ctx:helloParser.AssignContext):
+    # Visit a parse tree produced by helloParser#declare.
+    def visitDeclare(self, ctx:helloParser.DeclareContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by helloParser#declare.
-    def visitDeclare(self, ctx:helloParser.DeclareContext):
+    # Visit a parse tree produced by helloParser#assign.
+    def visitAssign(self, ctx:helloParser.AssignContext):
         return self.visitChildren(ctx)
 
 
